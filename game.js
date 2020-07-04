@@ -3,19 +3,23 @@ var buttonColors = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
 
+//Play sound upon user button click or new color added to sequence by newSequence()
+function playSound(name) {
+
+    var audio = new Audio("sounds/" + name + ".mp3");
+    audio.play();
+}
+
 //Detect users clicks and push to an array for storage
 $(".btn").click(function() {
 
     var userChosenColor = $(this).attr("id");
     userClickedPattern.push(userChosenColor);
+    playSound(userChosenColor);
 
 });
 
-function playSound(name) {
 
-    var audio = new Audio("sounds/" + randomChosenColor + ".mp3");
-    audio.play();
-}
 //Generate new sequence
 function newSequence() {
 
