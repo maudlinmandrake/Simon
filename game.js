@@ -55,7 +55,7 @@ function checkAnswer(currentLevel) {
         if (userClickedPattern.length === gamePattern.length) {
             setTimeout(function() {
                 nextSequence();
-            }, 1000);
+              }, 1000);
         }
     } else {
         console.log("wrong")
@@ -65,13 +65,13 @@ function checkAnswer(currentLevel) {
 // generate new sequence ------------------
 
 function newSequence() {
+g
+    // reset user answers upon new sequence    
+    userClickedPattern = [];
 
     // increase level upon creating new sequence
     level++;
     $("h1").text("Level " + level);
-
-    // reset user answers upon new sequence    
-    userClickedPattern = [];
 
     // generate a new color for the pattern
     var randomNumber = Math.floor(Math.random() * 4);
