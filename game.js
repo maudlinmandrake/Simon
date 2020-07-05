@@ -1,7 +1,9 @@
 
 var buttonColors = ["red", "blue", "green", "yellow"];
+
 var gamePattern = [];
 var userClickedPattern = [];
+
 var started = false;
 var level = 0;
 
@@ -54,7 +56,7 @@ function checkAnswer(currentLevel) {
     if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
         if (userClickedPattern.length === gamePattern.length) {
             setTimeout(function() {
-                nextSequence();
+                newSequence();
               }, 1000);
         }
     } else {
@@ -65,7 +67,7 @@ function checkAnswer(currentLevel) {
 // generate new sequence ------------------
 
 function newSequence() {
-g
+
     // reset user answers upon new sequence    
     userClickedPattern = [];
 
